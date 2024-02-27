@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/cin/stuff/c_im2ascii'
+gcc image2ascii.c bmp.c -o image2ascii
+make: Leaving directory '/home/cin/stuff/c_im2ascii'
+ 
