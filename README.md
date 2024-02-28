@@ -5,24 +5,26 @@ turn the given picture into ascii text by its greyscale
 only accept bmp file  
   
 ##### usage:  
-```
-make
-./image2ascii -p <fileName> -w <width> [-i] [-h]
-```
--i: inverse, 1/0 taken to make brighter/darker place more significant  
--h: print help message  
+> ```
+> make
+> ./image2ascii -p <fileName> -w <width> [-i] [-h]
+> ```
+> -i: inverse, 1/0 taken to make brighter/darker place more significant  
+> -h: print help message  
 
-ex:
-```
-./image2ascii -p shiki.png -w 40 -i
-```
+>ex:
+>```
+>./image2ascii -p shiki.png -w 40 -i
+>```
+
 ### C++
 accept all format support by opencv  
 ##### usage:
-```
-make
-./im2ascii_cpp <fileName> <width> <inverse>
-```
+> ```
+> make
+> ./im2ascii_cpp <fileName> <width> <inverse>
+> ```
+
 ```
 6 5 5 5 ; : - = ; + , , . . . . . . .   _ , : : : : + + + +  
 4 5 5 4 _ = = = , - : : : ; ; ; ; ; = , _ : : : : + + + + =  
