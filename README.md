@@ -1,7 +1,7 @@
 # image2ascii  
 turn the given picture into ascii text by its greyscale
 
-### C
+### [C](c_im2ascii)
 only accept bmp file  
   
 ##### usage:  
@@ -17,7 +17,7 @@ only accept bmp file
 >./image2ascii -p shiki.png -w 40 -i
 >```
 
-### C++
+### [C++](c++_im2ascii)
 accept all format support by opencv  
 ##### usage:
 > ```
