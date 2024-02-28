@@ -4,17 +4,22 @@
 using namespace std;
 using namespace cv;
 
-int main() {
-    Mat img = imread("joker.png", IMREAD_COLOR);
-    
-    if (img.empty()) {
-        std:cerr << "failed to load image" << endl;
+int main(int argc, char *argv[]) {
+    if (argc != 4) {
+        cerr << "usage: " << argv[0] << " <fileName> <width> <inverse>" << endl;
         return 1;
     }
 
-    int inverse = 0;
+    Mat img = imread(argv[1], IMREAD_COLOR);
+    
+    if (img.empty()) {
+        cerr << "failed to load image" << endl;
+        return 1;
+    }
+
+    int inverse = (int)stol(argv[3]);
     // width and height of the desired ascii text length
-    int width = 40;
+    int width = (int)stol(argv[2]);
     int height = (img.rows * width) / img.cols;
     
     const char *charMap = "N@#W$9876543210?!abc;:+=-,._                  ";
@@ -33,7 +38,7 @@ int main() {
             }
             avg /= bytepp;
             int inx;
-            if (inverse == 1) {
+            if (inverse == 0) {
                 inx = (avg * charMapLen) / 256;
             } else {
                 inx = charMapLen - 1 - (avg * charMapLen)/256; 
@@ -43,9 +48,5 @@ int main() {
         cout << endl;
     }
 
-    // cout << img.type() << endl;
-    // imshow("aaa", img2);
-
-    // waitKey(0);
     return 0;
 }
