@@ -1,24 +1,29 @@
 # image2ascii  
-## C
+turn the given picture into ascii text by its greyscale
+
+### C
 only accept bmp file  
+  
 ##### usage:  
 ```
 make
 ./image2ascii -p <fileName> -w <width> [-i] [-h]
 ```
+-i: inverse, 1/0 taken to make brighter/darker place more significant  
+-h: print help message  
+
 ex:
 ```
 ./image2ascii -p shiki.png -w 40 -i
 ```
-___
-## C++
+### C++
 accept all format support by opencv  
 ##### usage:
 ```
 make
 ./im2ascii_cpp <fileName> <width> <inverse>
 ```
-___
+```
 6 5 5 5 ; : - = ; + , , . . . . . . .   _ , : : : : + + + +  
 4 5 5 4 _ = = = , - : : : ; ; ; ; ; = , _ : : : : + + + + =  
 4 5 5 c     . + : ; ; ; ; ; ; : ; ; ; , = : : : : + + + = =  
@@ -47,4 +52,5 @@ ___
 4 5 ; 5 ;       . 5 5 0 5 5 ?         _ _   . = + : ; ; _  
 4 5 - c 1 . 2 -   0 ; _ 3 5 5 ;         . : ! ? ? ? 0 b c =  
 5 5 5 3         _ ; 0 + 5 5 5 5 : = 1 1 1 1 1 2 2 3 ? a ! 0  
-7 5 5 0 - _ = = +         , 1 : 4 a : a a a a a ! ! 0 0 a c  
+7 5 5 0 - _ = = +         , 1 : 4 a : a a a a a ! ! 0 0 a c
+```
