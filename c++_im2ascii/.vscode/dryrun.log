@@ -1,5 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/cin/stuff/c++_im2ascii'
-g++ im2ascii.cpp -o im2ascii_cpp `pkg-config opencv4 --cflags --libs`
-make: Leaving directory '/home/cin/stuff/c++_im2ascii'
- 
